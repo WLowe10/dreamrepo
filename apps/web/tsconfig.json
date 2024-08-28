@@ -1,0 +1,7 @@
+{
+	"extends": "@dreamrepo/tsconfig/remix.json",
+	"include": ["app"],
+	"compilerOptions": {
+		"noEmit": true
+	}
+}

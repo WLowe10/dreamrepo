@@ -1,0 +1,25 @@
+{
+	"name": "@dreamrepo/foo",
+	"private": true,
+	"scripts": {
+		"build": "tsup",
+		"clean": "pnpm clean:dist && pnpm clean:modules",
+		"clean:dist": "rm -rf dist",
+		"clean:modules": "rm -rf node_modules",
+		"typecheck": "tsc --noEmit"
+	},
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"@dreamrepo/source": "./src/index.ts",
+			"default": "./dist/index.mjs"
+		}
+	},
+	"devDependencies": {
+		"@dreamrepo/tsconfig": "workspace:^",
+		"tsup": "^8.2.4",
+		"typescript": "^5.5.4"
+	}
+}

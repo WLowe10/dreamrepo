@@ -1,0 +1,4 @@
+{
+	"extends": "@dreamrepo/tsconfig/react-library.json",
+	"include": ["src"]
+}

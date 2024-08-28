@@ -1,0 +1,4 @@
+{
+	"extends": "@dreamrepo/tsconfig/node.json",
+	"include": ["src"]
+}

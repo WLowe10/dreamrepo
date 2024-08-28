@@ -1,0 +1,38 @@
+{
+	"name": "@dreamrepo/web",
+	"private": true,
+	"sideEffects": false,
+	"type": "module",
+	"scripts": {
+		"build": "remix vite:build",
+		"dev": "remix vite:dev",
+		"start": "remix-serve ./build/server/index.js",
+		"clean": "pnpm clean:dist && pnpm clean:modules",
+		"clean:dist": "rm -rf build",
+		"clean:modules": "rm -rf node_modules",
+		"typecheck": "tsc --noEmit"
+	},
+	"files": [
+		"build"
+	],
+	"dependencies": {
+		"@dreamrepo/shared": "workspace:^",
+		"@remix-run/node": "^2.11.2",
+		"@remix-run/react": "^2.11.2",
+		"@remix-run/serve": "^2.11.2",
+		"isbot": "^4.1.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@dreamrepo/tsconfig": "workspace:^",
+		"@remix-run/dev": "^2.11.2",
+		"@types/react": "^18.2.20",
+		"@types/react-dom": "^18.2.7",
+		"typescript": "^5.1.6",
+		"vite": "^5.1.0"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	}
+}

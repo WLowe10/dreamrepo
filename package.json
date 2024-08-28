@@ -1,0 +1,28 @@
+{
+	"name": "dreamrepo",
+	"private": true,
+	"scripts": {
+		"g:dev": "pnpm -r dev",
+		"g:build": "pnpm -r build",
+		"g:clean": "rm -rf node_modules && pnpm -r clean",
+		"g:typecheck": "pnpm -r typecheck",
+		"g:format": "prettier --write .",
+		"apps:dev": "pnpm --filter '{./apps/**}...' dev",
+		"apps:build": "pnpm --filter '{./apps/**}...' build",
+		"apps:typecheck": "pnpm --filter '{./apps/**}...' typecheck",
+		"server:dev": "pnpm --filter '@dreamrepo/server...' dev",
+		"server:build": "pnpm --filter '@dreamrepo/server...' build",
+		"server:typecheck": "pnpm --filter '@dreamrepo/server...' typecheck",
+		"web:dev": "pnpm --filter '@dreamrepo/web...' dev",
+		"web:build": "pnpm --filter '@dreamrepo/web...' build",
+		"web:typecheck": "pnpm --filter '@dreamrepo/web...' typecheck",
+		"packages:build": "pnpm --filter './packages/**' build",
+		"packages:typecheck": "pnpm --filter './packages/**' typecheck"
+	},
+	"devDependencies": {
+		"typescript": "^5.5.4",
+		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
+		"prettier": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.6"
+	}
+}

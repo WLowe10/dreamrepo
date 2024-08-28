@@ -1,0 +1,18 @@
+{
+	"trailingComma": "es5",
+	"useTabs": true,
+	"tabWidth": 4,
+	"semi": true,
+	"singleQuote": false,
+	"printWidth": 100,
+	"quoteProps": "consistent",
+	"arrowParens": "always",
+	"plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+	"importOrder": [
+		"^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
+		"^(remix/(.*)$)|^(remix$)",
+		"<THIRD_PARTY_MODULES>",
+		"^@dreamrepo/(.*)$",
+		"^[./]"
+	]
+}

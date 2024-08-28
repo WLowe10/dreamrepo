@@ -1,0 +1,29 @@
+{
+	"name": "@dreamrepo/server",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "tsx watch --clear-screen=false --conditions=@dreamrepo/source ./src/main.ts",
+		"start": "node ./dist/main.js",
+		"build": "tsup",
+		"clean": "pnpm clean:dist && pnpm clean:modules",
+		"clean:dist": "rm -rf dist",
+		"clean:modules": "rm -rf node_modules",
+		"typecheck": "tsc --noEmit"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"@dreamrepo/shared": "workspace:*",
+		"fastify": "^4.28.1",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@dreamrepo/tsconfig": "workspace:*",
+		"@types/node": "^22.5.0",
+		"tsup": "^8.2.4",
+		"tsx": "^4.17.0",
+		"typescript": "^5.5.4"
+	}
+}
